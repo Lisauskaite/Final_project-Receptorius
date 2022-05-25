@@ -15,6 +15,7 @@ public class PapildytiKrepseli extends BaseTests {
     public void idekPrekeIKrepseli(){
         pages.receptorius.PapildytiKrepseli.click1kgButton();
         pages.receptorius.PapildytiKrepseli.clickAddAmountButton();
+        pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
     }
 
 }

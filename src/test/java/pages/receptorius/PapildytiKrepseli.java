@@ -15,4 +15,8 @@ public class PapildytiKrepseli {
     public static void clickAddAmountButton() {
         Common.clickElement(Locators.Receptorius.PapildytiKrepseli.addAmountButton);
     }
+
+    public static void clickAddToCartButton() {
+        Common.clickElement(Locators.Receptorius.PapildytiKrepseli.addToCartButton);
+    }
 }

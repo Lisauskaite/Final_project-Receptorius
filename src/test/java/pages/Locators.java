@@ -19,6 +19,7 @@ public class Locators {
             public static By oneKgButton = By.xpath("//*[@value='3']");
 
             public static By addAmountButton = By.xpath("//*[@class='material-icons touchspin-up']");
+            public static By addToCartButton = By.xpath("//*[@class='btn btn-primary add-to-cart']");
         }
     }
 }
