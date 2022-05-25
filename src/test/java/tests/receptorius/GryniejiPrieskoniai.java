@@ -19,13 +19,15 @@ public class GryniejiPrieskoniai extends BaseTests {
 
         pages.receptorius.GryniejiPrieskoniai.addSpiceNameToSearchBar(spiceName);
         pages.receptorius.GryniejiPrieskoniai.clickSearchButton();
-        pages.receptorius.GryniejiPrieskoniai.checkIfElementIsVisible();
 
-        Assert.assertTrue(pages.receptorius.GryniejiPrieskoniai.checkIfElementIsVisible());
+        Assert.assertTrue(pages.receptorius.GryniejiPrieskoniai.checkIfElementDeggiMirchIsVisible());
     }
     @Test
     public void searchForSpicesWithFilter(){
 
         pages.receptorius.GryniejiPrieskoniai.clickOnCiliPeppersInFilter();
+        pages.receptorius.GryniejiPrieskoniai.clickOnSpicyInFilterMenu();
+
+        Assert.assertTrue(pages.receptorius.GryniejiPrieskoniai.checkIfElementDeggiMirchIsVisibleAfterFilter());
     }
 }

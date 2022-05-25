@@ -16,11 +16,18 @@ public class GryniejiPrieskoniai {
         Common.clickElement(Locators.Receptorius.GryniejiPrieskoniai.searchButton);
     }
 
-    public static boolean checkIfElementIsVisible() {
-        return Common.checkIfElementIsVisible(Locators.Receptorius.GryniejiPrieskoniai.deggiMirchproductIcon);
+    public static boolean checkIfElementDeggiMirchIsVisible() {
+        return Common.checkIfElementIsVisible(Locators.Receptorius.GryniejiPrieskoniai.deggiMirchProductIcon);
     }
 
     public static void clickOnCiliPeppersInFilter() {
         Common.clickElement(Locators.Receptorius.GryniejiPrieskoniai.cilliPeppersButtonFromFilterMenu);
+    }
+
+    public static void clickOnSpicyInFilterMenu() {
+        Common.clickElement(Locators.Receptorius.GryniejiPrieskoniai.spicyButtonFromFilterMenu);
+    }
+    public static boolean checkIfElementDeggiMirchIsVisibleAfterFilter() {
+        return Common.checkIfElementIsVisible(Locators.Receptorius.GryniejiPrieskoniai.deggiMirchProductIconAfterFilter);
     }
 }

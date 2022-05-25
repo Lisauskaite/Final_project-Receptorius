@@ -30,8 +30,10 @@ public class Locators {
         public class GryniejiPrieskoniai{
             public static By searchBarInput = By.xpath("//*[@class='ui-autocomplete-input']");
             public static By searchButton = By.xpath("//*[@class='material-icons search']");
-            public static By deggiMirchproductIcon = By.xpath("//*[@data-id-product='409']");
-            public static By cilliPeppersButtonFromFilterMenu = By.xpath("(//*[@data-depth='1'])[8]");
+            public static By deggiMirchProductIcon = By.xpath("//*[@data-id-product='409']");
+            public static By cilliPeppersButtonFromFilterMenu = By.xpath("//*[@id=\"exCollapsingNavbar67\"]/ul/li[2]/a");
+            public static By spicyButtonFromFilterMenu = By.xpath("(//*[@class='ps-shown-by-js'])[3]");
+            public static By deggiMirchProductIconAfterFilter = By.xpath("//*[@data-id-product='409']");
         }
         }
     }
