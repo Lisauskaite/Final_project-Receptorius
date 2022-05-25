@@ -30,4 +30,11 @@ public class GryniejiPrieskoniai {
     public static boolean checkIfElementDeggiMirchIsVisibleAfterFilter() {
         return Common.checkIfElementIsVisible(Locators.Receptorius.GryniejiPrieskoniai.deggiMirchProductIconAfterFilter);
     }
+
+    public static boolean checkIfElement706isVisible() {
+        return Common.checkIfElementIsVisible(Locators.Receptorius.GryniejiPrieskoniai.seven06ProductIconBeforeFilter);
+    }
+    public static boolean checkIfElement706isVisibleAfterFilter() {
+        return Common.isElementPresent(Locators.Receptorius.GryniejiPrieskoniai.seven06ProductIconAfterFilter);
+    }
 }

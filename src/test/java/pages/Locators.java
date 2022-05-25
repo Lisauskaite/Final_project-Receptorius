@@ -34,6 +34,9 @@ public class Locators {
             public static By cilliPeppersButtonFromFilterMenu = By.xpath("//*[@id=\"exCollapsingNavbar67\"]/ul/li[2]/a");
             public static By spicyButtonFromFilterMenu = By.xpath("(//*[@class='ps-shown-by-js'])[3]");
             public static By deggiMirchProductIconAfterFilter = By.xpath("//*[@data-id-product='409']");
+
+            public static By seven06ProductIconBeforeFilter = By.xpath("//*[@data-id-product-attribute='706']");
+            public static By seven06ProductIconAfterFilter = By.xpath("//*[@data-id-product-attribute='706']");
         }
         }
     }

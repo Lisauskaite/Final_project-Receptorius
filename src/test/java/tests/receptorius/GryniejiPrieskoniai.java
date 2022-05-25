@@ -25,9 +25,12 @@ public class GryniejiPrieskoniai extends BaseTests {
     @Test
     public void searchForSpicesWithFilter(){
 
+        Assert.assertTrue(pages.receptorius.GryniejiPrieskoniai.checkIfElement706isVisible());
+
         pages.receptorius.GryniejiPrieskoniai.clickOnCiliPeppersInFilter();
         pages.receptorius.GryniejiPrieskoniai.clickOnSpicyInFilterMenu();
 
         Assert.assertTrue(pages.receptorius.GryniejiPrieskoniai.checkIfElementDeggiMirchIsVisibleAfterFilter());
+        Assert.assertFalse(pages.receptorius.GryniejiPrieskoniai.checkIfElement706isVisibleAfterFilter());
     }
 }
