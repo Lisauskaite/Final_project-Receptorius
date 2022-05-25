@@ -35,6 +35,7 @@ public class PapildytiKrepseli extends BaseTests {
 
         String largeNumberAmount = "10";
         String expectedTextInToManyItemsAlertMessage = "Pageidaujamo kiekio";
+
         pages.receptorius.PapildytiKrepseli.click25kgButton();
         pages.receptorius.PapildytiKrepseli.clearValueInInput();
         pages.receptorius.PapildytiKrepseli.addNewAmountOfItems(largeNumberAmount);
@@ -42,6 +43,7 @@ public class PapildytiKrepseli extends BaseTests {
         String actualToManyItemsAlertMessage = pages.receptorius.PapildytiKrepseli.readNotEnoughItemsAvailableAlertMessage();
 
         Assert.assertTrue(actualToManyItemsAlertMessage.contains(expectedTextInToManyItemsAlertMessage));
+
     }
 
 }
