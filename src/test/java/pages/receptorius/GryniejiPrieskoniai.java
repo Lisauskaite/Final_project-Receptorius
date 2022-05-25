@@ -15,4 +15,8 @@ public class GryniejiPrieskoniai {
     public static void clickSearchButton() {
         Common.clickElement(Locators.Receptorius.GryniejiPrieskoniai.searchButton);
     }
+
+    public static boolean checkIfElementIsVisible() {
+        return Common.checkIfElementIsVisible(Locators.Receptorius.GryniejiPrieskoniai.deggiMirchproductIcon);
+    }
 }

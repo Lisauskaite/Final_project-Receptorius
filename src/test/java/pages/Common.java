@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
 import java.time.Duration;
+import java.util.List;
 
 public class Common {
     public static void openUrl(String url) {
@@ -37,4 +38,9 @@ public class Common {
     public static void deleteDefaultValueInInput(By locator) {
         getElement(locator).clear();
     }
-}
+    public static boolean checkIfElementIsVisible (By locator){
+        getElement(locator).isDisplayed();
+        return true;
+    }
+    }
+
