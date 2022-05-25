@@ -9,6 +9,7 @@ public class Locators {
         public class Prisijungti{
 
             public static By inputEmail = By.xpath("//*[@name='email']");
+            public static By inputPassword = By.xpath("//*[@name='password']");
         }
     }
 }

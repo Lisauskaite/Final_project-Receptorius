@@ -12,5 +12,9 @@ public class Prisijungti {
     public static void enterEmailAdress(String Email) {
         Common.sendKeysToElement(Locators.Receptorius.Prisijungti.inputEmail, Email);
         }
+
+    public static void enterPassword (String password) {
+        Common.sendKeysToElement(Locators.Receptorius.Prisijungti.inputPassword, password);
     }
+}
 

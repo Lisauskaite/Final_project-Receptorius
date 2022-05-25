@@ -15,6 +15,8 @@ public class Prisijungti extends BaseTests {
     @Test
     public void tryToLogInWithNonExistingAccountInfo() {
         String nonExistingEmail = "vardenis@email.com";
+        String nonExistingPassword = "password";
         pages.receptorius.Prisijungti.enterEmailAdress(nonExistingEmail);
+        pages.receptorius.Prisijungti.enterPassword(nonExistingPassword);
     }
 }
