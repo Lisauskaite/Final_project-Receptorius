@@ -14,4 +14,7 @@ public class Common {
     public static void sendKeysToElement(By locator, String keys) {
         getElement(locator).sendKeys(keys);
     }
+    public static void clickElement(By locator) {
+        getElement(locator).click();
+    }
 }

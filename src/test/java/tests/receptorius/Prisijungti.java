@@ -18,5 +18,6 @@ public class Prisijungti extends BaseTests {
         String nonExistingPassword = "password";
         pages.receptorius.Prisijungti.enterEmailAdress(nonExistingEmail);
         pages.receptorius.Prisijungti.enterPassword(nonExistingPassword);
+        pages.receptorius.Prisijungti.clickLoginButton();
     }
 }

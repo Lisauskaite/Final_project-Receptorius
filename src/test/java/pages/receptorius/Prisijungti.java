@@ -16,5 +16,9 @@ public class Prisijungti {
     public static void enterPassword (String password) {
         Common.sendKeysToElement(Locators.Receptorius.Prisijungti.inputPassword, password);
     }
+
+    public static void clickLoginButton() {
+        Common.clickElement(Locators.Receptorius.Prisijungti.loginButton);
+    }
 }
 
