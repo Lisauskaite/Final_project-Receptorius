@@ -23,4 +23,8 @@ public class GryniejiPrieskoniai extends BaseTests {
 
         Assert.assertTrue(pages.receptorius.GryniejiPrieskoniai.checkIfElementIsVisible());
     }
+    @Test
+    public void searchForSpicesWithFilter(){
+
+    }
 }
