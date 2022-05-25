@@ -43,4 +43,12 @@ public class PapildytiKrepseli {
     public static void clearValueInInput() {
         Common.deleteDefaultValueInInput(Locators.Receptorius.PapildytiKrepseli.currentAmmountInput);
     }
+
+    public static void addNewAmountOfItems(String largeAmount) {
+        Common.sendKeysToElement(Locators.Receptorius.PapildytiKrepseli.currentAmmountInput, largeAmount);
+    }
+
+    public static String readNotEnoughItemsAvailableAlertMessage() {
+        return Common.getElementText(Locators.Receptorius.PapildytiKrepseli.notAvailableAmountAlertMessage);
+    }
 }

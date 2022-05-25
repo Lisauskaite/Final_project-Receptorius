@@ -33,11 +33,13 @@ public class PapildytiKrepseli extends BaseTests {
     @Test
     public void addAmountThatIsMoreThanThereIsInStorage(){
 
+        String largeNumberAmount = "10";
+
         pages.receptorius.PapildytiKrepseli.click25kgButton();
         pages.receptorius.PapildytiKrepseli.clearValueInInput();
-//        pages.receptorius.PapildytiKrepseli.addNewAmountOfItems();
-//        pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
-//        String actualToManyItemsAlertMessage = pages.receptorius.PapildytiKrepseli.readToManyItemsAlertMessage();
+        pages.receptorius.PapildytiKrepseli.addNewAmountOfItems(largeNumberAmount);
+        pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
+        String actualToManyItemsAlertMessage = pages.receptorius.PapildytiKrepseli.readNotEnoughItemsAvailableAlertMessage();
     }
 
 }

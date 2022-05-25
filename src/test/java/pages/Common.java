@@ -35,6 +35,6 @@ public class Common {
     }
 
     public static void deleteDefaultValueInInput(By locator) {
-  //      getElement(locator).clear();
+        getElement(locator).clear();
     }
 }
