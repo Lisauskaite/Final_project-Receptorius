@@ -14,13 +14,16 @@ public class Prisijungti extends BaseTests {
 
     @Test
     public void tryToLogInWithNonExistingAccountInfo() {
+
         String nonExistingEmail = "vardenis@email.com";
         String nonExistingPassword = "password";
         String expectedAlertMessage = "Identifikavimas nepavyko";
+
         pages.receptorius.Prisijungti.enterEmailAdress(nonExistingEmail);
         pages.receptorius.Prisijungti.enterPassword(nonExistingPassword);
         pages.receptorius.Prisijungti.clickLoginButton();
         String actualAlertMessage = pages.receptorius.Prisijungti.readAlertMessage();
+
         Assert.assertEquals(expectedAlertMessage, actualAlertMessage);
     }
 }

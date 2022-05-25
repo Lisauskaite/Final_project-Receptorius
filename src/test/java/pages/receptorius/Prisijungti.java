@@ -5,15 +5,15 @@ import pages.Locators;
 
 public class Prisijungti {
 
-    public static void openLoginUrl(){
+    public static void openLoginUrl() {
         Common.openUrl("https://receptorius.lt/prisijungimas?back=my-account");
     }
 
     public static void enterEmailAdress(String Email) {
         Common.sendKeysToElement(Locators.Receptorius.Prisijungti.inputEmail, Email);
-        }
+    }
 
-    public static void enterPassword (String password) {
+    public static void enterPassword(String password) {
         Common.sendKeysToElement(Locators.Receptorius.Prisijungti.inputPassword, password);
     }
 
