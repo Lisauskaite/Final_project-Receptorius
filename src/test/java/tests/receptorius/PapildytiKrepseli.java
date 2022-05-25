@@ -13,7 +13,7 @@ public class PapildytiKrepseli extends BaseTests {
     }
 
     @Test
-    public void idekPrekeIKrepseli() {
+    public void addItemsToCart() {
         String expectedMessageSuccesfullyAddedToCartMessage = "Prekė sėkmingai pridėta";
         String expectedNumberOfItemsInShoppingCartIcon = "2";
 
@@ -29,6 +29,15 @@ public class PapildytiKrepseli extends BaseTests {
         String actualNumberOfItemsInShoppingCartIcon = pages.receptorius.PapildytiKrepseli.getNumberOfItemsInCartIcon();
 
         Assert.assertTrue(actualNumberOfItemsInShoppingCartIcon.contains(expectedNumberOfItemsInShoppingCartIcon));
+    }
+    @Test
+    public void addAmountThatIsMoreThanThereIsInStorage(){
+
+        pages.receptorius.PapildytiKrepseli.click25kgButton();
+//        pages.receptorius.PapildytiKrepseli.clearValueInInput();
+//        pages.receptorius.PapildytiKrepseli.addNewAmountOfItems();
+//        pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
+//        String actualToManyItemsAlertMessage = pages.receptorius.PapildytiKrepseli.readToManyItemsAlertMessage();
     }
 
 }

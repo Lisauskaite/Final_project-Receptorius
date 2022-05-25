@@ -35,4 +35,8 @@ public class PapildytiKrepseli {
     public static String getNumberOfItemsInCartIcon() {
         return Common.getElementText(Locators.Receptorius.PapildytiKrepseli.cartIconCount);
     }
+
+    public static void click25kgButton() {
+        Common.clickElement(Locators.Receptorius.PapildytiKrepseli.twentyFiveKgButton);
+    }
 }
