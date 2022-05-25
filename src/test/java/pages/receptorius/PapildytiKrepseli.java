@@ -31,4 +31,8 @@ public class PapildytiKrepseli {
     public static void clickContinueShoppingButton() {
         Common.clickElement(Locators.Receptorius.PapildytiKrepseli.continueShopping);
     }
+
+    public static String getNumberOfItemsInCartIcon() {
+        return Common.getElementText(Locators.Receptorius.PapildytiKrepseli.cartIconCount);
+    }
 }

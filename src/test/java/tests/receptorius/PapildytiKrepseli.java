@@ -15,15 +15,20 @@ public class PapildytiKrepseli extends BaseTests {
     @Test
     public void idekPrekeIKrepseli(){
         String expectedMessageSuccesfullyAddedToCartMessage = "Prekė sėkmingai pridėta";
+        String expectedNumberOfItemsInShoppingCartIcon = "2";
 
         pages.receptorius.PapildytiKrepseli.click1kgButton();
         pages.receptorius.PapildytiKrepseli.clickAddAmountButton();
         pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
         pages.receptorius.PapildytiKrepseli.waitForCartToBeVisible();
         String actualMessageSuccesfullyAddedToCartMessage = pages.receptorius.PapildytiKrepseli.getCartConfirmationText();
-        System.out.println(actualMessageSuccesfullyAddedToCartMessage);
+
         Assert.assertTrue(actualMessageSuccesfullyAddedToCartMessage.contains(expectedMessageSuccesfullyAddedToCartMessage));
+
         pages.receptorius.PapildytiKrepseli.clickContinueShoppingButton();
+        String actualNumberOfItemsInShoppingCartIcon = pages.receptorius.PapildytiKrepseli.getNumberOfItemsInCartIcon();
+
+        Assert.assertTrue(actualNumberOfItemsInShoppingCartIcon.contains(expectedNumberOfItemsInShoppingCartIcon));
     }
 
 }

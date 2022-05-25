@@ -23,6 +23,7 @@ public class Locators {
             public static By cartOverviewWindow = By.xpath("//*[@id=\"blockcart-modal\"]");
             public static By confirmMessageField = By.xpath("//*[@id=\"myModalLabel\"]");
             public static By continueShopping = By.xpath("//*[@class=\"btn btn-secondary\"]");
+            public static By cartIconCount = By.xpath("(//*[@class='cart-products-count'])[1]");
         }
     }
 }
