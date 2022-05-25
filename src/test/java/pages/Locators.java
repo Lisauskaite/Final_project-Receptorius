@@ -27,9 +27,10 @@ public class Locators {
             public static By currentAmmountInput = By.xpath("//*[@id='quantity_wanted']");
             public static By notAvailableAmountAlertMessage = By.xpath("//*[@class='alert alert-danger ajax-error']");
         }
-            public class GryniejiPrieskoniai{
-                public static By searchBarInput = By.xpath("//*[@class='ui-autocomplete-input']");
-        }
+        public class GryniejiPrieskoniai{
+            public static By searchBarInput = By.xpath("//*[@class='ui-autocomplete-input']");
+            public static By searchButton = By.xpath("//*[@class='material-icons search']");
+            }
         }
     }
 

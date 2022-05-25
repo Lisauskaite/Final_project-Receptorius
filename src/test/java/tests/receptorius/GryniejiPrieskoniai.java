@@ -13,6 +13,8 @@ public class GryniejiPrieskoniai extends BaseTests {
     public void searchForSpicesWithSearchBar (){
         String spiceName = "Deggi Mirch";
         pages.receptorius.GryniejiPrieskoniai.addSpiceNameToSearchBar(spiceName);
+        pages.receptorius.GryniejiPrieskoniai.clickSearchButton();
+
 
     }
 }

@@ -11,4 +11,8 @@ public class GryniejiPrieskoniai {
     public static void addSpiceNameToSearchBar(String spiceName) {
         Common.sendKeysToElement(Locators.Receptorius.GryniejiPrieskoniai.searchBarInput, spiceName);
     }
+
+    public static void clickSearchButton() {
+        Common.clickElement(Locators.Receptorius.GryniejiPrieskoniai.searchButton);
+    }
 }
