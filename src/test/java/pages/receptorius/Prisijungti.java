@@ -20,5 +20,9 @@ public class Prisijungti {
     public static void clickLoginButton() {
         Common.clickElement(Locators.Receptorius.Prisijungti.loginButton);
     }
+
+    public static String readAlertMessage() {
+        return Common.getElementText(Locators.Receptorius.Prisijungti.fieldAlertMessage);
+    }
 }
 

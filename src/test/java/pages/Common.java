@@ -17,4 +17,7 @@ public class Common {
     public static void clickElement(By locator) {
         getElement(locator).click();
     }
+    public static String getElementText(By locator) {
+        return getElement(locator).getText();
+    }
 }
