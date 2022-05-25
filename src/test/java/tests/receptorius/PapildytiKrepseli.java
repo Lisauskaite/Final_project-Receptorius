@@ -34,12 +34,14 @@ public class PapildytiKrepseli extends BaseTests {
     public void addAmountThatIsMoreThanThereIsInStorage(){
 
         String largeNumberAmount = "10";
-
+        String expectedTextInToManyItemsAlertMessage = "Pageidaujamo kiekio";
         pages.receptorius.PapildytiKrepseli.click25kgButton();
         pages.receptorius.PapildytiKrepseli.clearValueInInput();
         pages.receptorius.PapildytiKrepseli.addNewAmountOfItems(largeNumberAmount);
         pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
         String actualToManyItemsAlertMessage = pages.receptorius.PapildytiKrepseli.readNotEnoughItemsAvailableAlertMessage();
+
+        Assert.assertTrue(actualToManyItemsAlertMessage.contains(expectedTextInToManyItemsAlertMessage));
     }
 
 }
