@@ -12,9 +12,13 @@ public class Locators {
             public static By inputPassword = By.xpath("//*[@name='password']");
             public static By loginButton = By.xpath("//*[@id='submit-login']");
             public static By fieldAlertMessage = By.xpath("//*[@class='alert alert-danger']");
+
         }
         public class PapildytiKrepseli{
 
+            public static By oneKgButton = By.xpath("//*[@value='3']");
+
+            public static By addAmountButton = By.xpath("//*[@class='material-icons touchspin-up']");
         }
     }
 }
