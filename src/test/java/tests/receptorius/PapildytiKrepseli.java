@@ -34,7 +34,7 @@ public class PapildytiKrepseli extends BaseTests {
     public void addAmountThatIsMoreThanThereIsInStorage(){
 
         pages.receptorius.PapildytiKrepseli.click25kgButton();
-//        pages.receptorius.PapildytiKrepseli.clearValueInInput();
+        pages.receptorius.PapildytiKrepseli.clearValueInInput();
 //        pages.receptorius.PapildytiKrepseli.addNewAmountOfItems();
 //        pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
 //        String actualToManyItemsAlertMessage = pages.receptorius.PapildytiKrepseli.readToManyItemsAlertMessage();

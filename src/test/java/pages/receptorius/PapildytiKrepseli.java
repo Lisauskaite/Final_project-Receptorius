@@ -39,4 +39,8 @@ public class PapildytiKrepseli {
     public static void click25kgButton() {
         Common.clickElement(Locators.Receptorius.PapildytiKrepseli.twentyFiveKgButton);
     }
+
+    public static void clearValueInInput() {
+        Common.deleteDefaultValueInInput(Locators.Receptorius.PapildytiKrepseli.currentAmmountInput);
+    }
 }
