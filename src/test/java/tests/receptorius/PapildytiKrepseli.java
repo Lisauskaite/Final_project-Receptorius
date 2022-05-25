@@ -22,8 +22,8 @@ public class PapildytiKrepseli extends BaseTests {
         pages.receptorius.PapildytiKrepseli.waitForCartToBeVisible();
         String actualMessageSuccesfullyAddedToCartMessage = pages.receptorius.PapildytiKrepseli.getCartConfirmationText();
         System.out.println(actualMessageSuccesfullyAddedToCartMessage);
-
         Assert.assertTrue(actualMessageSuccesfullyAddedToCartMessage.contains(expectedMessageSuccesfullyAddedToCartMessage));
+        pages.receptorius.PapildytiKrepseli.clickContinueShoppingButton();
     }
 
 }

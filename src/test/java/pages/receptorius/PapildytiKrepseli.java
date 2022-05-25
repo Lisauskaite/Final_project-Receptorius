@@ -27,4 +27,8 @@ public class PapildytiKrepseli {
     public static String getCartConfirmationText() {
         return Common.getElementText(Locators.Receptorius.PapildytiKrepseli.confirmMessageField);
     }
+
+    public static void clickContinueShoppingButton() {
+        Common.clickElement(Locators.Receptorius.PapildytiKrepseli.continueShopping);
+    }
 }
