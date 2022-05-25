@@ -20,6 +20,8 @@ public class Locators {
 
             public static By addAmountButton = By.xpath("//*[@class='material-icons touchspin-up']");
             public static By addToCartButton = By.xpath("//*[@class='btn btn-primary add-to-cart']");
+            public static By cartOverviewWindow = By.xpath("//*[@id=\"blockcart-modal\"]");
+            public static By confirmMessageField = By.xpath("//*[@id=\"myModalLabel\"]");
         }
     }
 }
