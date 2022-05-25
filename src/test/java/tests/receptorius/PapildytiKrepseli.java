@@ -8,7 +8,7 @@ import tests.BaseTests;
 public class PapildytiKrepseli extends BaseTests {
 
     @BeforeMethod
-    public void openLoginPage() {
+    public void openPage() {
         pages.receptorius.PapildytiKrepseli.openLoginUrl();
     }
 
