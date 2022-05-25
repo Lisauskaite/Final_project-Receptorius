@@ -26,5 +26,6 @@ public class GryniejiPrieskoniai extends BaseTests {
     @Test
     public void searchForSpicesWithFilter(){
 
+        pages.receptorius.GryniejiPrieskoniai.clickOnCiliPeppersInFilter();
     }
 }

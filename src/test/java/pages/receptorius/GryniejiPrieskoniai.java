@@ -19,4 +19,8 @@ public class GryniejiPrieskoniai {
     public static boolean checkIfElementIsVisible() {
         return Common.checkIfElementIsVisible(Locators.Receptorius.GryniejiPrieskoniai.deggiMirchproductIcon);
     }
+
+    public static void clickOnCiliPeppersInFilter() {
+        Common.clickElement(Locators.Receptorius.GryniejiPrieskoniai.cilliPeppersButtonFromFilterMenu);
+    }
 }
