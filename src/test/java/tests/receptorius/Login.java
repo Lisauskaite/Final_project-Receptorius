@@ -5,11 +5,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTests;
 
-public class Prisijungti extends BaseTests {
+public class Login extends BaseTests {
 
     @BeforeMethod
     public void openLoginPage() {
-        pages.receptorius.Prisijungti.openLoginUrl();
+        pages.receptorius.Login.open();
+
     }
 
     @Test
@@ -19,24 +20,26 @@ public class Prisijungti extends BaseTests {
         String nonExistingPassword = "password";
         String expectedAlertMessage = "Identifikavimas nepavyko";
 
-        pages.receptorius.Prisijungti.enterEmailAdress(nonExistingEmail);
-        pages.receptorius.Prisijungti.enterPassword(nonExistingPassword);
-        pages.receptorius.Prisijungti.clickLoginButton();
-        String actualAlertMessage = pages.receptorius.Prisijungti.readAlertMessage();
+        pages.receptorius.Login.enterEmailAdress(nonExistingEmail);
+        pages.receptorius.Login.enterPassword(nonExistingPassword);
+        pages.receptorius.Login.clickLoginButton();
+        String actualAlertMessage = pages.receptorius.Login.readAlertMessage();
 
         Assert.assertEquals(expectedAlertMessage, actualAlertMessage);
+
     }
+
     @Test
-    public void tryToLogInAndLogOutWithExistingAccountInfo(){
+    public void tryToLogInWithExistingAccountInfo() {
 
         String existingEmail = "vismante.lisauskaite@gmail.com";
         String existingPassword = "vcsprojektas";
         String expectedAccountNameAfterLoggingIn = "Vismante Lisauskaite";
 
-        pages.receptorius.Prisijungti.enterEmailAdress(existingEmail);
-        pages.receptorius.Prisijungti.enterPassword(existingPassword);
-        pages.receptorius.Prisijungti.clickLoginButton();
-        String actualAccountNameAfterLoggingIn = pages.receptorius.Prisijungti.getAccountNameAfterLoggingIn();
+        pages.receptorius.Login.enterEmailAdress(existingEmail);
+        pages.receptorius.Login.enterPassword(existingPassword);
+        pages.receptorius.Login.clickLoginButton();
+        String actualAccountNameAfterLoggingIn = pages.receptorius.Login.getAccountNameAfterLoggingIn();
 
         Assert.assertEquals(expectedAccountNameAfterLoggingIn, actualAccountNameAfterLoggingIn);
 

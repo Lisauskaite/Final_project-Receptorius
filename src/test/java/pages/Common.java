@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
@@ -37,10 +38,7 @@ public class Common {
     public static void deleteDefaultValueInInput(By locator) {
         getElement(locator).clear();
     }
-    public static boolean checkIfElementIsVisible (By locator){
-        getElement(locator).isDisplayed();
-        return true;
-    }
+
     public static boolean isElementPresent(By locator) {
         try {
             Driver.getDriver().findElement(locator);
@@ -48,6 +46,14 @@ public class Common {
         } catch (NoSuchElementException e) {
             return false;
         }
+    }
+
+    public static void dragMouseToElement(By locator) {
+        WebElement element = getElement(locator);
+        Actions action = new Actions(Driver.getDriver());
+
+        action.moveToElement(element);
+        action.perform();
     }
 }
 

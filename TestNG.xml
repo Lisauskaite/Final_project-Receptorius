@@ -3,9 +3,9 @@
 <suite name="Testing Selenium Easy" parallel="methods" thread-count="3">
     <test name="Demo Tests">
         <classes>
-            <class name="tests.receptorius.GryniejiPrieskoniai"/>
-            <class name="tests.receptorius.PapildytiKrepseli"/>
-            <class name="tests.receptorius.Prisijungti"/>
+            <class name="tests.receptorius.SpiceSearch"/>
+            <class name="tests.receptorius.AddToCart"/>
+            <class name="tests.receptorius.Login"/>
         </classes>
     </test>
 </suite>
