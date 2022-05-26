@@ -21,10 +21,10 @@ public class Locators {
             public static By button25Kg = By.xpath("//*[@value='5']");
             public static By buttonAddAmount = By.xpath("//*[@class='material-icons touchspin-up']");
             public static By buttonAddToCart = By.xpath("//*[@class='btn btn-primary add-to-cart']");
-            public static By buttonContinueShopping = By.xpath("//*[@class=\"btn btn-secondary\"]");
-            public static By fieldItemsAddedSuccessfullyMessage = By.xpath("//*[@id=\"myModalLabel\"]");
+            public static By buttonContinueShopping = By.xpath("//*[@class='btn btn-secondary']");
+            public static By fieldItemsAddedSuccessfullyMessage = By.xpath("//*[@id='myModalLabel']");
             public static By fieldNotAvailableAmountMessage = By.xpath("//*[@class='alert alert-danger ajax-error']");
-            public static By frameItemsInCart = By.xpath("//*[@id=\"blockcart-modal\"]");
+            public static By frameItemsInCart = By.xpath("//*[@id='blockcart-modal']");
             public static By iconItemsInCart = By.xpath("(//*[@class='cart-products-count'])[1]");
             public static By inputCurrentAmount = By.xpath("//*[@id='quantity_wanted']");
 
@@ -33,7 +33,7 @@ public class Locators {
 
             public static By inputSearch = By.xpath("//*[@class='ui-autocomplete-input']");
             public static By buttonSearch = By.xpath("//*[@class='material-icons search']");
-            public static By buttonCilliPeppersFromFilterMenu = By.xpath("//*[@id=\"exCollapsingNavbar67\"]/ul/li[2]/a");
+            public static By buttonCilliPeppersFromFilterMenu = By.xpath("(//*[@class='category-sub-link'])[2]");
             public static By buttonSpicyFromFilterMenu = By.xpath("(//*[@class='ps-shown-by-js'])[3]");
             public static By fieldDeggiMirchProductIconBeforeApplyingFilter = By.xpath("//*[@data-id-product='409']");
             public static By fieldOtherSpiceIconBeforeApplyingFilter = By.xpath("//*[@data-id-product-attribute='706']");
