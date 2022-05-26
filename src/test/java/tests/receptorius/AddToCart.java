@@ -11,8 +11,9 @@ public class AddToCart extends BaseTests {
     public void openPage() {
         pages.receptorius.AddToCart.open();
     }
+
     @Test
-    public void addAmountThatIsMoreThanThereIsInStorage(){
+    public void addAmountThatIsMoreThanThereIsInStorage() {
 
         String largeNumberAmount = "10";
         String expectedTextInToManyItemsAlertMessage = "Pageidaujamo kiekio";
@@ -27,8 +28,10 @@ public class AddToCart extends BaseTests {
         Assert.assertTrue(actualToManyItemsAlertMessage.contains(expectedTextInToManyItemsAlertMessage));
 
     }
+
     @Test
     public void addItemsToCart() {
+
         String expectedMessageSuccessfullyAddedToCartMessage = "Prekė sėkmingai pridėta";
         String expectedNumberOfItemsInShoppingCartIcon = "2";
 

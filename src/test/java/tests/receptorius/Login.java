@@ -20,7 +20,7 @@ public class Login extends BaseTests {
         String nonExistingPassword = "password";
         String expectedAlertMessage = "Identifikavimas nepavyko";
 
-        pages.receptorius.Login.enterEmailAdress(nonExistingEmail);
+        pages.receptorius.Login.enterEmailAdrress(nonExistingEmail);
         pages.receptorius.Login.enterPassword(nonExistingPassword);
         pages.receptorius.Login.clickLoginButton();
         String actualAlertMessage = pages.receptorius.Login.readAlertMessage();
@@ -36,7 +36,7 @@ public class Login extends BaseTests {
         String existingPassword = "vcsprojektas";
         String expectedAccountNameAfterLoggingIn = "Vismante Lisauskaite";
 
-        pages.receptorius.Login.enterEmailAdress(existingEmail);
+        pages.receptorius.Login.enterEmailAdrress(existingEmail);
         pages.receptorius.Login.enterPassword(existingPassword);
         pages.receptorius.Login.clickLoginButton();
         String actualAccountNameAfterLoggingIn = pages.receptorius.Login.getAccountNameAfterLoggingIn();

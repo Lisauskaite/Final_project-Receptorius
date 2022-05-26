@@ -30,6 +30,7 @@ public class SpiceSearch extends BaseTests {
 
         Assert.assertTrue(pages.receptorius.SpiceSearch.checkIfRandomSpiceIsVisible());
 
+        pages.receptorius.SpiceSearch.waitForDropDownMenuToExpand();
         pages.receptorius.SpiceSearch.clickOnCiliPeppersInFilter();
         pages.receptorius.SpiceSearch.clickOnSpicyInFilterMenu();
 

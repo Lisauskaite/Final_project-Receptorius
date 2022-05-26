@@ -9,7 +9,7 @@ public class Login {
         Common.openUrl("https://receptorius.lt/prisijungimas?back=my-account");
     }
 
-    public static void enterEmailAdress(String Email) {
+    public static void enterEmailAdrress(String Email) {
         Common.sendKeysToElement(Locators.Receptorius.Login.inputEmail, Email);
     }
 

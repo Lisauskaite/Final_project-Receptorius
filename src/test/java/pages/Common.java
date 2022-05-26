@@ -55,5 +55,10 @@ public class Common {
         action.moveToElement(element);
         action.perform();
     }
+
+    public static void waitForElementToBeClickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
 }
 

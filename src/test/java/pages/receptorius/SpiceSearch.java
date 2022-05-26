@@ -32,11 +32,16 @@ public class SpiceSearch {
     public static boolean checkIfRandomSpiceIsVisible() {
         return Common.isElementPresent(Locators.Receptorius.SpiceSearch.fieldOtherSpiceIconBeforeApplyingFilter);
     }
-    public static void dragMouseToProductSection(){
+
+    public static void dragMouseToProductSection() {
         Common.dragMouseToElement(Locators.Receptorius.SpiceSearch.fieldProductSection);
     }
 
     public static void clickOnCategorySpices() {
         Common.clickElement(Locators.Receptorius.SpiceSearch.buttonSpicesCategory);
+    }
+
+    public static void waitForDropDownMenuToExpand() {
+            Common.waitForElementToBeClickable(Locators.Receptorius.SpiceSearch.buttonCilliPeppersFromFilterMenu);
     }
 }
