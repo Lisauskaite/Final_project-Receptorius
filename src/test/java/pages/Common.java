@@ -1,17 +1,14 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
-import java.time.Duration;
-import java.util.List;
-
 public class Common {
+
     public static void openUrl(String url) {
         Driver.getDriver().get(url);
     }
@@ -33,7 +30,7 @@ public class Common {
     }
 
     public static void waitForElementToBeVisible(By locator) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
@@ -52,5 +49,5 @@ public class Common {
             return false;
         }
     }
-    }
+}
 
