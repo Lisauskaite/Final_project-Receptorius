@@ -51,4 +51,7 @@ public class PapildytiKrepseli {
     public static String readNotEnoughItemsAvailableAlertMessage() {
         return Common.getElementText(Locators.Receptorius.PapildytiKrepseli.notAvailableAmountAlertMessage);
     }
+    public static void waitForAlertMesssageToBeVisible() {
+        Common.waitForElementToBeVisible(Locators.Receptorius.PapildytiKrepseli.notAvailableAmountAlertMessage);
+    }
 }

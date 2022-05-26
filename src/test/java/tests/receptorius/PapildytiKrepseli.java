@@ -40,6 +40,7 @@ public class PapildytiKrepseli extends BaseTests {
         pages.receptorius.PapildytiKrepseli.clearValueInInput();
         pages.receptorius.PapildytiKrepseli.addNewAmountOfItems(largeNumberAmount);
         pages.receptorius.PapildytiKrepseli.clickAddToCartButton();
+        pages.receptorius.PapildytiKrepseli.waitForAlertMesssageToBeVisible();
         String actualToManyItemsAlertMessage = pages.receptorius.PapildytiKrepseli.readNotEnoughItemsAvailableAlertMessage();
 
         Assert.assertTrue(actualToManyItemsAlertMessage.contains(expectedTextInToManyItemsAlertMessage));
