@@ -1,9 +1,11 @@
 # Project Receptorius
-*Testing online store receptorius.lt, that sells all kinds of spices, implementing tests to check if important functions work, such as login, search for spices and add them to your cart
-### Page URL
-- Spice search https://receptorius.lt/
-- Add to cart https://receptorius.lt/grynieji-prieskoniai/102-246-aitriosios-cili-paprikos-maltos-4771224991069.html#/1-svoris-60_g
-- Login https://receptorius.lt/prisijungimas?back=my-account
+## Setup
+### Sites used for testing
+[receptorius](https://receptorius.lt/)
+### Packages used
+- TestNG `org.testng:testng`
+- Selenium `org.seleniumhq.selenium:selenium-java`
+- WebDriverManager `io.github.bonigarcia:webdrivermanager`
 ## Test steps
 ### **Class AddToCart**
 #### Test 1 (addAmountThatIsMoreThanThereIsInStorage)
