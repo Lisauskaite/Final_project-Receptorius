@@ -24,5 +24,8 @@ public class Prisijungti {
     public static String readAlertMessage() {
         return Common.getElementText(Locators.Receptorius.Prisijungti.fieldAlertMessage);
     }
-}
 
+    public static String getAccountNameAfterLoggingIn() {
+        return Common.getElementText(Locators.Receptorius.Prisijungti.accountName);
+    }
+}

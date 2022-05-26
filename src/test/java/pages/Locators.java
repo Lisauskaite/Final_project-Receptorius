@@ -13,6 +13,7 @@ public class Locators {
             public static By loginButton = By.xpath("//*[@id='submit-login']");
             public static By fieldAlertMessage = By.xpath("//*[@class='alert alert-danger']");
 
+            public static By accountName = By.xpath("(//*[@class='hidden-sm-down'])[2]");
         }
         public class PapildytiKrepseli{
 
