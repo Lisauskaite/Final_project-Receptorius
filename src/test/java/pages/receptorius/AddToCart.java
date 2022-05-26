@@ -1,5 +1,6 @@
 package pages.receptorius;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import pages.Common;
 import pages.Locators;
 
@@ -18,7 +19,11 @@ public class AddToCart {
     }
 
     public static void clickAddToCartButton() {
-        Common.clickElement(Locators.Receptorius.AddToCart.buttonAddToCart);
+        try {
+            Common.clickElement(Locators.Receptorius.AddToCart.buttonAddToCart);
+        } catch (StaleElementReferenceException e) {
+            System.out.println("Button did not work");
+        }
     }
 
     public static void waitForCartToBeVisible() {
@@ -35,25 +40,5 @@ public class AddToCart {
 
     public static String getNumberOfItemsInCartIcon() {
         return Common.getElementText(Locators.Receptorius.AddToCart.iconItemsInCart);
-    }
-
-    public static void click25kgButton() {
-        Common.clickElement(Locators.Receptorius.AddToCart.button25Kg);
-    }
-
-    public static void clearValueInInput() {
-        Common.deleteDefaultValueInInput(Locators.Receptorius.AddToCart.inputCurrentAmount);
-    }
-
-    public static void addNewAmountOfItems(String largeAmount) {
-        Common.sendKeysToElement(Locators.Receptorius.AddToCart.inputCurrentAmount, largeAmount);
-    }
-
-    public static String readNotEnoughItemsAvailableAlertMessage() {
-        return Common.getElementText(Locators.Receptorius.AddToCart.fieldNotAvailableAmountMessage);
-    }
-
-    public static void waitForAlertMesssageToBeVisible() {
-        Common.waitForElementToBeVisible(Locators.Receptorius.AddToCart.fieldNotAvailableAmountMessage);
     }
 }

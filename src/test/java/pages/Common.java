@@ -35,10 +35,6 @@ public class Common {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public static void deleteDefaultValueInInput(By locator) {
-        getElement(locator).clear();
-    }
-
     public static boolean isElementPresent(By locator) {
         try {
             Driver.getDriver().findElement(locator);
