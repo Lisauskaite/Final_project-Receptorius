@@ -5,6 +5,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTests;
 
+import static pages.Constants.*;
+
 public class SpiceSearch extends BaseTests {
     @BeforeMethod
     public void openMainPage() {
@@ -15,25 +17,27 @@ public class SpiceSearch extends BaseTests {
     @Test
     public void searchForSpicesWithSearchBar() {
 
-        String spiceName = "Deggi Mirch";
-
-        pages.receptorius.SpiceSearch.addSpiceNameToSearchBar(spiceName);
+        pages.receptorius.SpiceSearch.addSpiceNameToSearchBar(SPICE_DEGGI_MIRCH);
         pages.receptorius.SpiceSearch.clickSearchButton();
-
-        Assert.assertTrue(pages.receptorius.SpiceSearch.checkIfElementDeggiMirchIsVisible());
+        String textFromSpiceDeggiMirch = pages.receptorius.SpiceSearch.getTextFromDeggiMirchName();
+        Assert.assertEquals(SPICE_DEGGI_MIRCH, textFromSpiceDeggiMirch);
     }
+
     @Test
-    public void searchForSpicesWithFilters(){
+    public void searchForSpicesWithFilters() {
 
         pages.receptorius.SpiceSearch.dragMouseToProductSection();
         pages.receptorius.SpiceSearch.clickOnCategorySpices();
+        String spiceBasilElementText = pages.receptorius.SpiceSearch.getTextFromBasilName();
 
-        Assert.assertTrue(pages.receptorius.SpiceSearch.checkIfRandomSpiceIsVisible());
+        Assert.assertEquals(SPICE_BASIL, spiceBasilElementText);
 
-        pages.receptorius.SpiceSearch.waitForDropDownMenuToExpand();
-        pages.receptorius.SpiceSearch.clickOnCiliPeppersInFilter();
+        pages.receptorius.SpiceSearch.clickOnCiliPeppersInFilterMenu();
         pages.receptorius.SpiceSearch.clickOnSpicyInFilterMenu();
+        pages.receptorius.SpiceSearch.waitForBasilToFilterOut();
+        String spiceDeggiMirchName = pages.receptorius.SpiceSearch.getTextFromDeggiMirchName();
 
-        Assert.assertTrue(pages.receptorius.SpiceSearch.checkIfElementDeggiMirchIsVisible());
-        Assert.assertFalse(pages.receptorius.SpiceSearch.checkIfRandomSpiceIsVisible());    }
+        Assert.assertEquals(SPICE_DEGGI_MIRCH, spiceDeggiMirchName);
+        Assert.assertFalse(pages.receptorius.SpiceSearch.checkIfSpiceBasilIsVisible());
+    }
 }

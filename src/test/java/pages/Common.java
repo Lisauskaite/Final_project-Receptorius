@@ -47,7 +47,6 @@ public class Common {
     public static void dragMouseToElement(By locator) {
         WebElement element = getElement(locator);
         Actions action = new Actions(Driver.getDriver());
-
         action.moveToElement(element);
         action.perform();
     }
@@ -55,6 +54,14 @@ public class Common {
     public static void waitForElementToBeClickable(By locator) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waitForElementToFilterOut(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+    public static String getCurrentUrl (){
+       return Driver.getDriver().getCurrentUrl();
     }
 }
 

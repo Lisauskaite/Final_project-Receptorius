@@ -3,6 +3,7 @@ package tests.receptorius;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.Common;
 import tests.BaseTests;
 
 public class Login extends BaseTests {
@@ -35,13 +36,15 @@ public class Login extends BaseTests {
         String existingEmail = "vismante.lisauskaite@gmail.com";
         String existingPassword = "vcsprojektas";
         String expectedAccountNameAfterLoggingIn = "Vismante Lisauskaite";
+        String expectedPageUrl = "https://receptorius.lt/mano-paskyra";
 
         pages.receptorius.Login.enterEmailAdrress(existingEmail);
         pages.receptorius.Login.enterPassword(existingPassword);
         pages.receptorius.Login.clickLoginButton();
         String actualAccountNameAfterLoggingIn = pages.receptorius.Login.getAccountNameAfterLoggingIn();
+        String actualPageUrl = Common.getCurrentUrl();
 
         Assert.assertEquals(expectedAccountNameAfterLoggingIn, actualAccountNameAfterLoggingIn);
-
+        Assert.assertEquals(expectedPageUrl, actualPageUrl);
     }
 }

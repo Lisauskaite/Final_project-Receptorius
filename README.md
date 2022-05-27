@@ -8,14 +8,7 @@
 - WebDriverManager `io.github.bonigarcia:webdrivermanager`
 ## Test steps
 ### **Class AddToCart**
-#### Test 1 (addAmountThatIsMoreThanThereIsInStorage)
-*Try to add an amount of items in storage that is greater than the available amount*
-1. Open page of one of the items in the Store
-2. Click on button "25kg"
-3. Input a previously declared number(10) into quantity input
-4. Click "Add to cart" button
-5. After a warning message appears, check if warning message contains text "Pageidaujamo kiekio"
-#### Test 2 (addItemsToCart)
+#### Test 1 (addItemsToCart)
 *Try to add available amount of items into cart*
 1. Open page of one of the items in the Store
 2. Click on button "1kg"

@@ -15,16 +15,16 @@ public class AddToCart extends BaseTests {
     @Test
     public void addItemsToCart() {
 
-        String expectedMessageSuccessfullyAddedToCartMessage = "Prekė sėkmingai pridėta";
+        String expectedSuccessfullyAddedToCartMessage = "Prekė sėkmingai pridėta";
         String expectedNumberOfItemsInShoppingCartIcon = "2";
 
         pages.receptorius.AddToCart.click1kgButton();
         pages.receptorius.AddToCart.clickAddAmountButton();
         pages.receptorius.AddToCart.clickAddToCartButton();
         pages.receptorius.AddToCart.waitForCartToBeVisible();
-        String actualMessageSuccessfullyAddedToCartMessage = pages.receptorius.AddToCart.getCartConfirmationText();
+        String actualSuccessfullyAddedToCartMessage = pages.receptorius.AddToCart.getCartConfirmationText();
 
-        Assert.assertTrue(actualMessageSuccessfullyAddedToCartMessage.contains(expectedMessageSuccessfullyAddedToCartMessage));
+        Assert.assertTrue(actualSuccessfullyAddedToCartMessage.contains(expectedSuccessfullyAddedToCartMessage));
 
         pages.receptorius.AddToCart.clickContinueShoppingButton();
         String actualNumberOfItemsInShoppingCartIcon = pages.receptorius.AddToCart.getNumberOfItemsInCartIcon();

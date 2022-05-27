@@ -1,5 +1,6 @@
 package pages.receptorius;
 
+import org.openqa.selenium.By;
 import pages.Common;
 import pages.Locators;
 
@@ -17,20 +18,20 @@ public class SpiceSearch {
         Common.clickElement(Locators.Receptorius.SpiceSearch.buttonSearch);
     }
 
-    public static boolean checkIfElementDeggiMirchIsVisible() {
-        return Common.isElementPresent(Locators.Receptorius.SpiceSearch.fieldDeggiMirchProductIconBeforeApplyingFilter);
-    }
+    public static void clickOnCiliPeppersInFilterMenu() {
 
-    public static void clickOnCiliPeppersInFilter() {
+        Common.waitForElementToBeClickable(Locators.Receptorius.SpiceSearch.buttonCilliPeppersFromFilterMenu);
         Common.clickElement(Locators.Receptorius.SpiceSearch.buttonCilliPeppersFromFilterMenu);
     }
 
     public static void clickOnSpicyInFilterMenu() {
-        Common.clickElement(Locators.Receptorius.SpiceSearch.buttonSpicyFromFilterMenu);
+        By locator = Locators.Receptorius.SpiceSearch.buttonSpicyFromFilterMenu;
+        Common.waitForElementToBeClickable(locator);
+        Common.clickElement(locator);
     }
 
-    public static boolean checkIfRandomSpiceIsVisible() {
-        return Common.isElementPresent(Locators.Receptorius.SpiceSearch.fieldOtherSpiceIconBeforeApplyingFilter);
+    public static boolean checkIfSpiceBasilIsVisible() {
+        return Common.isElementPresent(Locators.Receptorius.SpiceSearch.fieldBasilProductIconName);
     }
 
     public static void dragMouseToProductSection() {
@@ -41,7 +42,15 @@ public class SpiceSearch {
         Common.clickElement(Locators.Receptorius.SpiceSearch.buttonSpicesCategory);
     }
 
-    public static void waitForDropDownMenuToExpand() {
-            Common.waitForElementToBeClickable(Locators.Receptorius.SpiceSearch.buttonCilliPeppersFromFilterMenu);
+    public static String getTextFromDeggiMirchName() {
+        return Common.getElementText(Locators.Receptorius.SpiceSearch.fieldDeggiMirchProductIconName);
+    }
+
+    public static String getTextFromBasilName() {
+        return Common.getElementText(Locators.Receptorius.SpiceSearch.fieldBasilProductIconName);
+    }
+
+    public static void waitForBasilToFilterOut() {
+        Common.waitForElementToFilterOut(Locators.Receptorius.SpiceSearch.fieldBasilProductIconName);
     }
 }

@@ -35,9 +35,9 @@ public class Locators {
             public static By buttonCilliPeppersFromFilterMenu = By.xpath("(//*[@class='category-sub-link'])[2]");
             public static By buttonSpicyFromFilterMenu = By.xpath("(//*[@class='ps-shown-by-js'])[3]");
             public static By buttonSpicesCategory = By.xpath("(//*[@class='dropdown-item dropdown-submenu'])[1]");
-            public static By fieldDeggiMirchProductIconBeforeApplyingFilter = By.xpath("//*[@data-id-product='409']");
-            public static By fieldOtherSpiceIconBeforeApplyingFilter = By.xpath("//*[@data-id-product-attribute='706']");
             public static By fieldProductSection = By.xpath("(//*[@class='dropdown-item'])[1]");
+            public static By fieldDeggiMirchProductIconName = By.xpath("(//*[@class='h3 product-title'])[1]");
+            public static By fieldBasilProductIconName = By.xpath("(//*[@class='h3 product-title'])[4]");
 
         }
 
