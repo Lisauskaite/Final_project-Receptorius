@@ -28,6 +28,7 @@ public class SpiceSearch {
         By locator = Locators.Receptorius.SpiceSearch.buttonSpicyFromFilterMenu;
         Common.waitForElementToBeClickable(locator);
         Common.clickElement(locator);
+        Common.waitForElementToFilterOut(Locators.Receptorius.SpiceSearch.fieldBasilProductIconName);
     }
 
     public static void clickOnCategorySpices() {
@@ -50,7 +51,4 @@ public class SpiceSearch {
         return Common.getElementText(Locators.Receptorius.SpiceSearch.fieldBasilProductIconName);
     }
 
-    public static void waitForBasilToFilterOut() {
-        Common.waitForElementToFilterOut(Locators.Receptorius.SpiceSearch.fieldBasilProductIconName);
-    }
 }

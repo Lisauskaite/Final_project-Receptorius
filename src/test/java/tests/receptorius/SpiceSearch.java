@@ -34,7 +34,6 @@ public class SpiceSearch extends BaseTests {
 
         pages.receptorius.SpiceSearch.clickOnCiliPeppersInFilterMenu();
         pages.receptorius.SpiceSearch.clickOnSpicyInFilterMenu();
-        pages.receptorius.SpiceSearch.waitForBasilToFilterOut();
         String spiceDeggiMirchName = pages.receptorius.SpiceSearch.getTextFromDeggiMirchName();
 
         Assert.assertEquals(SPICE_DEGGI_MIRCH, spiceDeggiMirchName);
