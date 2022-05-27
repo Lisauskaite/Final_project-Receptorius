@@ -6,8 +6,8 @@
 - TestNG `org.testng:testng`
 - Selenium `org.seleniumhq.selenium:selenium-java`
 - WebDriverManager `io.github.bonigarcia:webdrivermanager`
-## Test steps
-### **Class AddToCart**
+## Test cases
+### **Add To Cart**
 #### Test 1 (addItemsToCart)
 *Try to add available amount of items into cart*
 1. Open page of one of the items in the Store
@@ -17,7 +17,7 @@
 5. Cart item window appears, check if window contains text "Prekė sėkmingai pridėta"
 6. Click "Continue shopping" button
 7. Check if cart icon shows that 2 items are in the cart
-### Class Login
+### Login
 #### Test 1 (tryToLogInWithNonExistingAccountInfo)
 *Try to log in with non-existing account information*
 1. Open log in page
@@ -29,8 +29,8 @@
 1. Open log in page
 2. Input email(vismante.lisauskaite@gmail.com) and password(vcsprojektas)
 3. Click "Login" button
-4. Check if account name(Vismante Lisauskaite) appeared on top
-### Class SpiceSearch
+4. Check if account name(Vismante Lisauskaite) appeared on top and current Url is correct
+### Spice Search
 #### Test 1 (searchForSpicesWithSearchBar)
 *Try to search for spices with search bar*
 1. Open main page
