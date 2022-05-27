@@ -3,7 +3,6 @@ package tests.receptorius;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.Common;
 import tests.BaseTests;
 
 public class Login extends BaseTests {

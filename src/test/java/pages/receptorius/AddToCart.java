@@ -1,6 +1,5 @@
 package pages.receptorius;
 
-import org.openqa.selenium.StaleElementReferenceException;
 import pages.Common;
 import pages.Locators;
 
