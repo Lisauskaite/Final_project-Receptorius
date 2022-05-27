@@ -19,19 +19,12 @@ public class AddToCart {
     }
 
     public static void clickAddToCartButton() {
-        try {
-            Common.clickElement(Locators.Receptorius.AddToCart.buttonAddToCart);
-        } catch (StaleElementReferenceException e) {
-            System.out.println("Button did not work");
-        }
+        Common.clickElement(Locators.Receptorius.AddToCart.buttonAddToCart);
+        Common.waitForElementToBeVisible(Locators.Receptorius.AddToCart.frameItemsInCart);
     }
 
     public static void clickContinueShoppingButton() {
         Common.clickElement(Locators.Receptorius.AddToCart.buttonContinueShopping);
-    }
-
-    public static void waitForCartToBeVisible() {
-        Common.waitForElementToBeVisible(Locators.Receptorius.AddToCart.frameItemsInCart);
     }
 
     public static String getCartConfirmationText() {

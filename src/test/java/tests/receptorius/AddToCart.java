@@ -21,7 +21,6 @@ public class AddToCart extends BaseTests {
         pages.receptorius.AddToCart.click1kgButton();
         pages.receptorius.AddToCart.clickAddAmountButton();
         pages.receptorius.AddToCart.clickAddToCartButton();
-        pages.receptorius.AddToCart.waitForCartToBeVisible();
         String actualSuccessfullyAddedToCartMessage = pages.receptorius.AddToCart.getCartConfirmationText();
 
         Assert.assertTrue(actualSuccessfullyAddedToCartMessage.contains(expectedSuccessfullyAddedToCartMessage));

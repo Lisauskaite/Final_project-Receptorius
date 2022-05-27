@@ -19,9 +19,9 @@ public class SpiceSearch {
     }
 
     public static void clickOnCiliPeppersInFilterMenu() {
-
-        Common.waitForElementToBeClickable(Locators.Receptorius.SpiceSearch.buttonCilliPeppersFromFilterMenu);
-        Common.clickElement(Locators.Receptorius.SpiceSearch.buttonCilliPeppersFromFilterMenu);
+        By locator = Locators.Receptorius.SpiceSearch.buttonCilliPeppersFromFilterMenu;
+        Common.waitForElementToBeClickable(locator);
+        Common.clickElement(locator);
     }
 
     public static void clickOnSpicyInFilterMenu() {
