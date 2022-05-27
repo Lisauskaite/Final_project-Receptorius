@@ -1,6 +1,6 @@
 # Project Receptorius
 ## Setup
-### Sites used for testing
+### Site used for testing
 [receptorius](https://receptorius.lt/)
 ### Packages used
 - TestNG `org.testng:testng`
