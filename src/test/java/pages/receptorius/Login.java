@@ -28,5 +28,9 @@ public class Login {
     public static String getAccountNameAfterLoggingIn() {
         return Common.getElementText(Locators.Receptorius.Login.fieldAccountNameAfterLoggingIn);
     }
+
+    public static String getCurrentUrl() {
+        return Common.getCurrentUrl();
+    }
 }
 

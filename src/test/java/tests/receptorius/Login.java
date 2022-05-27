@@ -42,7 +42,7 @@ public class Login extends BaseTests {
         pages.receptorius.Login.enterPassword(existingPassword);
         pages.receptorius.Login.clickLoginButton();
         String actualAccountNameAfterLoggingIn = pages.receptorius.Login.getAccountNameAfterLoggingIn();
-        String actualPageUrl = Common.getCurrentUrl();
+        String actualPageUrl = pages.receptorius.Login.getCurrentUrl();
 
         Assert.assertEquals(expectedAccountNameAfterLoggingIn, actualAccountNameAfterLoggingIn);
         Assert.assertEquals(expectedPageUrl, actualPageUrl);
