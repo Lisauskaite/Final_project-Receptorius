@@ -60,8 +60,9 @@ public class Common {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Constants.TIMEOUT);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
-    public static String getCurrentUrl (){
-       return Driver.getDriver().getCurrentUrl();
+
+    public static String getCurrentUrl() {
+        return Driver.getDriver().getCurrentUrl();
     }
 }
 

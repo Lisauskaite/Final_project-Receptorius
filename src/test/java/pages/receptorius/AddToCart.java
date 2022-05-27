@@ -26,16 +26,16 @@ public class AddToCart {
         }
     }
 
+    public static void clickContinueShoppingButton() {
+        Common.clickElement(Locators.Receptorius.AddToCart.buttonContinueShopping);
+    }
+
     public static void waitForCartToBeVisible() {
         Common.waitForElementToBeVisible(Locators.Receptorius.AddToCart.frameItemsInCart);
     }
 
     public static String getCartConfirmationText() {
         return Common.getElementText(Locators.Receptorius.AddToCart.fieldItemsAddedSuccessfullyMessage);
-    }
-
-    public static void clickContinueShoppingButton() {
-        Common.clickElement(Locators.Receptorius.AddToCart.buttonContinueShopping);
     }
 
     public static String getNumberOfItemsInCartIcon() {

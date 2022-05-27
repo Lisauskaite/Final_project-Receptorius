@@ -30,16 +30,16 @@ public class SpiceSearch {
         Common.clickElement(locator);
     }
 
+    public static void clickOnCategorySpices() {
+        Common.clickElement(Locators.Receptorius.SpiceSearch.buttonSpicesCategory);
+    }
+
     public static boolean checkIfSpiceBasilIsVisible() {
         return Common.isElementPresent(Locators.Receptorius.SpiceSearch.fieldBasilProductIconName);
     }
 
     public static void dragMouseToProductSection() {
         Common.dragMouseToElement(Locators.Receptorius.SpiceSearch.fieldProductSection);
-    }
-
-    public static void clickOnCategorySpices() {
-        Common.clickElement(Locators.Receptorius.SpiceSearch.buttonSpicesCategory);
     }
 
     public static String getTextFromDeggiMirchName() {
